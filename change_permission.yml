@@ -1,0 +1,9 @@
+---
+- name: change permission
+  hosts: all
+
+  tasks: 
+  - name: Changing perms on file
+    file:
+      path: /home/admin1/testing/demo.txt
+      mode: o=,g=r,u=rw

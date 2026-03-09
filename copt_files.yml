@@ -1,0 +1,13 @@
+---
+- name: Copying files to server
+  hosts: all
+  become: true
+  tasks:
+  - name: copy files
+    copy:
+      src: /home/nirav.r/self-learning/ansible/playbook/demo.txt
+      dest: /home/admin1
+      owner: admin1
+      group: admin1
+      mode: 0660
+      backup: true

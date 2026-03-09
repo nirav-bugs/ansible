@@ -1,0 +1,14 @@
+---
+- name: Creating files and folder at remove
+  hosts: all
+
+  tasks:
+  - name: Creating folder
+    file:
+      path: /home/admin1/testing
+      state: directory
+
+  - name: Creating the file
+    file:
+      path: /home/admin1/testing/demo.txt
+      state: touch

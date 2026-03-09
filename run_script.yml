@@ -1,0 +1,10 @@
+---
+- name: Running script in remote server
+  hosts: all
+  become: true
+  tasks:
+  - name: Run script in its folder
+    shell: /home/admin1/script.sh> script.log
+    args:
+      chdir: /home/admin1/Desktop
+      creates: script.log
